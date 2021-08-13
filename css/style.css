@@ -1,0 +1,68 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.pushable {
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.front {
+    display: block;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    color: white;
+    transform: translateY(-6px);
+    height: 100px;
+    width: 100px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+}
+
+.pushable[value="none"] {
+    background: #004b9b;
+}
+
+.pushable[value="none"] .front {
+    background: #017afd;
+}
+
+.pushable[value="like"] {
+    background: #1b6d00;
+}
+
+.pushable[value="like"] .front {
+    background: #18b500;
+}
+
+.pushable[value="dislike"] {
+    background: #6d0000;
+}
+
+.pushable[value="dislike"] .front {
+    background: #b50000;
+}
